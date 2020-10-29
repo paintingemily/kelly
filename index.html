@@ -15,7 +15,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;0,900;1,300;1,600;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -23,9 +23,68 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!-- initial -->
+  <div id="initial">
+    <!-- Introduction -->
+    <div class="intro">
+      <h1>You made it!</h1>
+      <p>By now, you've hopefully gathered 7 very important letters from all the clues we've left. Now's the time to put those letters into action!</p>
+      <p>Unscramble them into these slots to reveal the secret code message:</p>
+    </div>
+    <div class="word">
+      <!-- "MISS" -->
+      <input 
+        type="text"
+        id="letter-1"
+        name="letter-1"
+        maxlength="1" />
+      <input 
+        type="text"
+        id="letter-2"
+        name="letter-2"
+        maxlength="1" />
+      <input 
+        type="text"
+        id="letter-3"
+        name="letter-3"
+        maxlength="1" />
+      <input 
+        type="text"
+        id="letter-4"
+        name="letter-4"
+        maxlength="1" />
+    </div>
+    <div class="word">
+      <!-- "YOU" -->
+      <input 
+        type="text"
+        id="letter-5"
+        name="letter-5"
+        maxlength="1" />
+      <input 
+        type="text"
+        id="letter-6"
+        name="letter-6"
+        maxlength="1" />
+      <input 
+        type="text"
+        id="letter-7"
+        name="letter-7"
+        maxlength="1" />
+    </div>
+    <div class="submit">
+      <button class="submit-btn" type="button" value="send" onclick="submitWords()">Submit</button>
+    </div>
+  </div>
+  <!-- success state -->
+  <div id="success" class="hide">
+    <h1 class="success-title">
+      <span>Yep!</span>
+      <span> It's true!</span>
+      <span>We miss you Kelly!</span>
+    </h1>
+  </div>
+  
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
