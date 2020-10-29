@@ -1,3 +1,11 @@
+window.onload = (event) => {
+    // check if succeeded previously
+    isPrevSuccess = window.localStorage.getItem('succeeded') === 'true';
+    if (isPrevSuccess) {
+        showSuccess();
+    }
+};
+
 function submitWords() {
     // check accuracy of inputs
     const inputOne = document.getElementById('letter-1');
@@ -19,6 +27,7 @@ function submitWords() {
     if (isIncorrect) {
         alert("Sorry, that isn't correct. Try again!");
     } else {
+        window.localStorage.setItem('succeeded', 'true');
         showSuccess(inputs);
     }
 

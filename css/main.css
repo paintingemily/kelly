@@ -339,6 +339,15 @@ input:focus {
   display: none;
 }
 
+.bold {
+  font-weight: 900;
+}
+
+.brand {
+  font-weight: 900;
+  font-style: italic;
+}
+
 .success-title > span {
   opacity: 0;
   animation: fadeIn .3s ease;
@@ -351,6 +360,7 @@ input:focus {
 
 .success-title > span:nth-child(3) {
   animation-delay: 2s;
+  display: block;
 }
 
 @keyframes fadeIn {
