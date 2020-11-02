@@ -389,6 +389,7 @@ input:focus {
 }
 
 .timeline {
+  width: 100%;
   opacity: 0;
   animation: fadeIn 1s ease 10s;
   animation-fill-mode: forwards;
@@ -475,13 +476,40 @@ input:focus {
 .section:nth-of-type(even) {
   background: rgba(233,208,201,1);
 }
+.section.size-1-5 {
+  height: 150vh;
+}
 
 .section.size-2 {
   height: 200vh;
 }
 
+.section.size-2-2 {
+  height: 220vh;
+}
+
+.section.size-2-5 {
+  height: 250vh;
+}
+
 .section.size-3 {
   height: 300vh;
+}
+
+.section.size-4 {
+  height: 400vh;
+}
+
+.section.size-5 {
+  height: 500vh;
+}
+
+.section.size-6 {
+  height: 600vh;
+}
+
+.section.size-7 {
+  height: 700vh;
 }
 
 .section p {
@@ -504,31 +532,74 @@ input:focus {
 }
 
 .section img:first-of-type {
-  left: 50px;
+  left: 5%;
   top: 10vh;
 }
 
 .section img:nth-of-type(2) {
-  right: 50px;
-  top: 40vh;
+  right: 5%;
+  top: 30vh;
 }
 
 .section img:nth-of-type(3) {
-  left: 50px;
-  top: 80vh;
+  left: 0;
+  top: 50vh;
 }
 
 .section img:nth-of-type(4) {
-  right: 50px;
-  top: 120vh;
+  right: 0;
+  top: 70vh;
 }
 .section img:nth-of-type(5) {
-  left: 50px;
-  top: 160vh;
+  left: 5%;
+  top: 90vh;
 }
 .section img:nth-of-type(6) {
-  right: 50px;
-  top: 200vh;
+  right: 5%;
+  top: 110vh;
+}
+.section img:nth-of-type(7) {
+  left: 0;
+  top: 130vh;
+}
+.section img:nth-of-type(8) {
+  right: 0;
+  top: 150vh;
+}
+.section img:nth-of-type(9) {
+  left: 5%;
+  top: 170vh;
+}
+.section img:nth-of-type(10) {
+  right: 5%;
+  top: 190vh;
+}
+.section img:nth-of-type(11) {
+  left: 0;
+  top: 210vh;
+}
+.section img:nth-of-type(12) {
+  right: 0;
+  top: 230vh;
+}
+.section img:nth-of-type(13) {
+  left: 5%;
+  top: 250vh;
+}
+.section img:nth-of-type(14) {
+  right: 5%;
+  top: 270vh;
+}
+.section img:nth-of-type(15) {
+  left: 0;
+  top: 290vh;
+}
+
+.section img.left-15 {
+  left: 15%;
+}
+.section img.right-23 {
+  right: 23%;
 }
 
 @keyframes fadeIn {
@@ -537,5 +608,19 @@ input:focus {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width:800px) {
+  .section {
+    height: auto !important;
+  }
+  .section img {
+    position: relative !important;
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    width: 100%;
+    height: unset;
   }
 }
