@@ -1,9 +1,25 @@
+// import simpleParallax from 'simple-parallax-js';
+
+// var images = document.querySelectorAll('img');
+//     new simpleParallax(images, {
+//         overflow: true
+//     });
+
 window.onload = (event) => {
+    // const simpleParallax = window.simpleParallax;
     // check if succeeded previously
     isPrevSuccess = window.localStorage.getItem('succeeded') === 'true';
     if (isPrevSuccess) {
         showSuccess();
     }
+
+    // var images = document.querySelectorAll('.parallax-image');
+    // new simpleParallax(images, {
+    //     overflow: true,
+    //     orientation: 'left'
+    // });
+
+    var rellax = new Rellax('.rellax');
 };
 
 function submitWords() {
@@ -25,6 +41,16 @@ function submitWords() {
     const isIncorrect = lowercaseValues.some((value, index) => value !== correctAnswers[index]);
 
     if (isIncorrect) {
+        let attempts = window.localStorage.getItem('attempts');
+        if (attempts > 3) {
+            inputs.forEach((input, index) => {
+                if (lowercaseValues[index] !== correctAnswers[index]) {
+                    input.value = '';
+                    input.classList.add('red');
+                }
+            });
+        }
+        window.localStorage.setItem('attempts', attempts + 1);
         alert("Sorry, that isn't correct. Try again!");
     } else {
         window.localStorage.setItem('succeeded', 'true');
@@ -41,5 +67,6 @@ function showSuccess() {
 
     firstSection.classList.add('hide');
     successSection.classList.remove('hide');
+    window.scrollTo(0, 0);
 
 }
